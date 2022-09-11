@@ -13,7 +13,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     # image_byte = uploaded_file.getvalue()
     st.image(image, caption="Uploaded Image.", use_column_width=True)
-    with st.spinner("Loading model"):
+    with st.spinner("Loading model, it could take a while..."):
         model = ImageClassifier()
     with st.spinner("Predict..."):
         prediction = model.predict(image=image)
